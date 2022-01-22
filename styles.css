@@ -42,15 +42,25 @@ body{
     text-align:center;
     margin-top: 20px;
     border: 1px solid #3E4160;
-    border-width:  4px;
+    border-width:  14px;
     padding: 15px ;
+    margin-bottom: 20px;
+
+    
+    backdrop-filter: blur(px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
    
 
     width: 290px;
     display: block;
     margin-right:  auto;
     margin-left: auto;
-    border-radius: 40px;
+    border-radius: 10px;
     font-size: 24px;
 }
 .a{
