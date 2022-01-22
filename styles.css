@@ -11,6 +11,8 @@ body{
     color: #3E4160;
     font-family: 'Rubik', sans-serif;
     letter-spacing: 2px;
+    overflow: hidden;
+    
     
     
     
@@ -28,6 +30,7 @@ body{
     max-width: 100px;
 
     border-radius: 50%;
+    
 }
 .profile-name{
     text-align:center;
@@ -40,7 +43,8 @@ body{
     margin-top: 20px;
     border: 1px solid #3E4160;
     border-width:  4px;
-    padding: 15px;
+    padding: 15px ;
+   
 
     width: 290px;
     display: block;
@@ -48,9 +52,6 @@ body{
     margin-left: auto;
     border-radius: 40px;
     font-size: 24px;
-   
-    
-
 }
 .a{
     text-decoration: none;
@@ -69,6 +70,156 @@ body{
 
 a:hover{
     color: #9FDBE6;
+    
+
+}
+
+@keyframes change{
+    0%{
+        background-position:0 50% ;
+    }
+    50%{
+        background-position:100% 50% ;
+    }
+    100%{
+        background-position:0 50% ;
+    }
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(-45deg,#CA8BF5,#DECFEE,);
+    
+
+}
+section .color{
+    position: absolute;
+    filter: blur(150px);/*150*/
+    
+}
+section .color:nth-child(1)
+{
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #CA8BF5;
+}
+section .color:nth-child(2)
+{
+    top: -150px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    background: #9FDBE6;
+    
+}
+
+section .color:nth-child(3)
+{
+    top: 50px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+    background: #3E4160
+}
+.box{
+    position: relative;
+    
+}
+.box .cuadro{
+    position: absolute ;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    animation: animate 10s linear infinite;
+
+}
+@keyframes animate{
+    0%
+    {
+        transform:translateY(-40px)
+        rotate(0deg)
+    }
+    50%
+    {
+        transform:translateY(40px)
+        rotate(90deg)
+        
+    }
+    100%
+    {
+        transform:translateY(-40px)
+        rotate(180deg)
+    }
+
+    
+}
+.box .cuadro:nth-child(5){
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+
+}
+.box .cuadro:nth-child(1){
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+
+}
+.box .cuadro:nth-child(2){
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+
+}
+.box .cuadro:nth-child(3){
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+
+}
+.box .cuadro:nth-child(4){
+    bottom: -80px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+     /*esta es la horientacion de la carta flex = horizontal, nada es vertical*/ 
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     
 }
 @keyframes change{
